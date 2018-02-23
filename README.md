@@ -1,5 +1,5 @@
 # Programmability Black Belt
-## Asignment for Apprentice Level1
+## Asignment for Apprentice Level1 - under folder Apprentice_Level1
 ###### Camp1_Day2_assign1.py
 **sameple Output:**
 ```

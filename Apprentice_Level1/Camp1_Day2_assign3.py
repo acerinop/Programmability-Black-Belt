@@ -25,13 +25,13 @@ def sequencialValue(seqListName):
     seqListName.sort(key=int)
     return seqListName
 
-def joinValue(joinListName):
-    joinList = ",".join(joinListName)
+def joinValue(joinListName, separator):
+    joinList = separator.join(joinListName)
     return joinList
 
-def find_even(numbersList):
+def find_even(numbersList, keyName, separatorValue):
     #split the value with ',' separator by using function defined earlier
-    evenNumber = splitValue(numbersList[0], "sequence", ",")
+    evenNumber = splitValue(numbersList[0], keyName, separatorValue)
     #remove "un-even" number in the list  by using function defined earlier
     evenNumber = removeUneven(evenNumber)
     #remove duplicate entries in the list  by using function defined earlier
@@ -39,10 +39,10 @@ def find_even(numbersList):
     # sort the list in ascending order by using function defined earlier
     evenNumber = sequencialValue(evenNumber)
     # join list values using "," separator and rely on the function defined earlier
-    evenNumber = joinValue(evenNumber)
+    evenNumber = joinValue(evenNumber, separatorValue)
     print("output : The even numbers are : " + evenNumber)
 
 # Entry point for program
 if __name__ == '__main__':
     # execute the find_even function and print out the result
-    find_even(numbers)
+    find_even(numbers, "sequence", ",")
